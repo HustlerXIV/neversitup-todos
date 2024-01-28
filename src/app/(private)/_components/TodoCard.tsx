@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import "./component.css";
 
+import "./component.css";
 import Card from "@/components/common/Card";
 import { TodoDetails } from "@/utils/types";
 import TodoDialog from "./TodoDialog";

@@ -3,12 +3,8 @@
 import React, { useState } from "react";
 import "./component.css";
 import { TodoDetails } from "@/utils/types";
-import { fetchData } from "@/utils/api";
-import { POST } from "@/utils/constants";
 import TodoDialog from "./TodoDialog";
 import { createTodo } from "../actions";
-
-const ENDPOINT = "/todos/";
 
 type Props = {
   onList?: () => void;
