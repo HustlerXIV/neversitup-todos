@@ -1,0 +1,100 @@
+.wrapper-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.todo-card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.action-btn {
+  border-radius: 50%;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-container {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: -moz-linear-gradient(
+    bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.rounded-btn {
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.size-50px {
+  width: 50px;
+  height: 50px;
+}
+
+.size-75px {
+  width: 75px;
+  height: 75px;
+}
+
+.blue-gradient {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+}
+
+.pink-gradient {
+  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+}
+
+.font-white {
+  color: white;
+}
+
+.width-100 {
+  width: 100px;
+}
+
+.width-200 {
+  width: 200px;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.width-100-percent {
+  width: 100%;
+}
+
+.max-width-700 {
+  max-width: 700px;
+}
