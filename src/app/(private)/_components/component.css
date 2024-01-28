@@ -9,6 +9,7 @@
 .todo-card-container {
   display: flex;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .action-btn {
