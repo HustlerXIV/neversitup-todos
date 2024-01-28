@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import "./component.css";
 import Card from "@/components/common/Card";
@@ -18,6 +19,7 @@ type Props = {
 export default function TodoCard({ id, title, description }: Props) {
   const [display, setDisplay] = useState<boolean>(false);
   const [deleteDialog, setDeleteDialog] = useState<boolean>(false);
+  const router = useRouter();
 
   const [details, setDetails] = useState<TodoDetails>({
     title: "",
@@ -26,10 +28,12 @@ export default function TodoCard({ id, title, description }: Props) {
 
   const handleDisplay = () => {
     setDisplay((prev) => !prev);
+    router.refresh();
   };
 
   const handleDeleteDialog = () => {
     setDeleteDialog((prev) => !prev);
+    router.refresh();
   };
 
   const handleOnChange = (key: string, value: string) => {

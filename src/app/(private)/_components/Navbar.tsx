@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+
 import "./component.css";
 import { TodoDetails } from "@/utils/types";
 import TodoDialog from "./TodoDialog";
@@ -17,9 +19,11 @@ export default function Navbar({ onList, onFinish }: Props) {
     title: "",
     description: "",
   });
+  const router = useRouter();
 
   const handleOnDisplay = () => {
     setDisplay((prev) => !prev);
+    router.refresh();
   };
 
   const handleOnChange = (key: string, value: string) => {
