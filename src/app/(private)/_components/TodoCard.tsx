@@ -52,7 +52,7 @@ export default function TodoCard({ id, title, description }: Props) {
       {deleteDialog && (
         <Dialog
           title="Todo"
-          onConfirm={() => removeTodo(id)}
+          onConfirm={() => removeTodo(id, handleDeleteDialog)}
           onCancel={handleDeleteDialog}
         >
           Do you want to delete this item?

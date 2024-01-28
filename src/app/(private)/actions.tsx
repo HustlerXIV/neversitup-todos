@@ -6,7 +6,6 @@ const TODO_ENDPOINT: string = "/todos/";
 
 export const createTodo = async (details: TodoDetails, display: () => void) => {
   await fetchData({ endpoint: TODO_ENDPOINT, method: POST, data: details });
-  await getAllTodos();
   display();
 };
 
@@ -37,16 +36,18 @@ export const updateTodoDetails = async (
     method: PUT,
     data: details,
   });
-  await getAllTodos();
   display();
 };
 
-export const removeTodo = async (id: string | undefined) => {
+export const removeTodo = async (
+  id: string | undefined,
+  display: () => void
+) => {
   await fetchData({
     endpoint: `${TODO_ENDPOINT}/${id}`,
     method: DELETE,
   });
-  await getAllTodos();
+  display();
 };
 
 export const getAllTodos = async () => {
